@@ -20,7 +20,7 @@ sub register {
       return $callback
         ?   $self->render(text => $callback . '('
           . $self->render(json => $ref, partial => 1) . ')')
-        : $self->render_json($ref);
+        : $self->render(json => $ref );
     }
   );
 }
